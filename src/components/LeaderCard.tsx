@@ -105,11 +105,11 @@ export default function LeaderCard({ leader, viewMode }: LeaderCardProps) {
       style={{ backgroundColor: '#1A2335' }}
     >
       {/* Image Container */}
-      <div className="relative w-full overflow-hidden" style={{ height: '280px' }}>
+      <div className="relative w-full overflow-hidden aspect-[4/5] sm:aspect-auto sm:h-[280px]">
         <LazyImage
           src={leader.image}
           alt={leader.name}
-          className="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500"
+          className="w-full h-full object-cover object-[center_20%] group-hover:scale-105 transition duration-500"
         />
         {/* Subtle bottom gradient */}
         <div className="absolute inset-0" style={{

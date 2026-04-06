@@ -122,7 +122,7 @@ export default function LeaderPage({ params }: { params: { slug: string } }) {
           {/* Info Section */}
           <div className="flex flex-col justify-center">
             {/* Name */}
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
               {leader.name}
             </h1>
 
