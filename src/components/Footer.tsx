@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Footer() {
   return (
@@ -7,7 +8,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Branding section */}
           <div>
-            <h3 className="text-xl font-bold text-gold mb-2">The Fifty</h3>
+            <Image
+              src="https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69cce2536388514ed0b381e0_The%20FIFTY%20White%20Logo.png"
+              alt="The Fifty"
+              width={160}
+              height={46}
+              className="h-10 w-auto mb-3"
+            />
             <p className="text-gray-400 text-sm">
               Capital · Policy · Culture
             </p>

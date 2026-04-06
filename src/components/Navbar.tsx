@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -58,9 +59,16 @@ export default function Navbar() {
             {/* Logo/Title */}
             <Link
               href="/"
-              className="flex items-center gap-2 text-xl md:text-2xl font-bold text-gold hover:text-gold-bright transition-colors"
+              className="flex items-center gap-2 hover:opacity-90 transition-opacity"
             >
-              <span>The Fifty</span>
+              <Image
+                src="https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69cce2536388514ed0b381e0_The%20FIFTY%20White%20Logo.png"
+                alt="The Fifty"
+                width={140}
+                height={40}
+                className="h-8 md:h-10 w-auto"
+                priority
+              />
             </Link>
 
             {/* Desktop nav links */}
