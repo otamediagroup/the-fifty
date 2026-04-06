@@ -13,11 +13,11 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 hover:opacity-90 transition-opacity">
             <Image
-              src="https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69cce2536388514ed0b381e0_The%20FIFTY%20White%20Logo.png"
+              src="https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c81d5b281e5a311043f7b7_The-Fifty-Logo-Transparent.png"
               alt="The Fifty"
-              width={140}
-              height={40}
-              className="h-8 md:h-10 w-auto"
+              width={160}
+              height={50}
+              className="h-9 md:h-11 w-auto"
               priority
             />
           </Link>

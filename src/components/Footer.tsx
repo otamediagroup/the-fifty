@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Branding section */}
           <div>
             <Image
-              src="https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69cce2536388514ed0b381e0_The%20FIFTY%20White%20Logo.png"
+              src="https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c81d5b281e5a311043f7b7_The-Fifty-Logo-Transparent.png"
               alt="The Fifty"
               width={160}
               height={46}
