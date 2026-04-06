@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import ScoreBar from './ScoreBar';
+import LazyImage from './LazyImage';
 
 interface LeaderScores {
   market: number;
@@ -67,13 +68,12 @@ export default function LeaderCard({ leader, viewMode }: LeaderCardProps) {
 
         {/* Photo */}
         <div className="flex-shrink-0">
-          <img
+          <LazyImage
             src={leader.image}
             alt={leader.name}
             width={56}
             height={56}
             className="rounded-lg object-cover"
-            loading="lazy"
           />
         </div>
 
@@ -143,11 +143,10 @@ export default function LeaderCard({ leader, viewMode }: LeaderCardProps) {
 
       {/* Image Container */}
       <div className="relative w-full aspect-square overflow-hidden bg-gray-100">
-        <img
+        <LazyImage
           src={leader.image}
           alt={leader.name}
           className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
-          loading="lazy"
         />
       </div>
 

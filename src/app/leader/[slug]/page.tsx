@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { leaders } from '@/data/leaders';
+import LazyImage from '@/components/LazyImage';
 
 const SCORE_COLORS = {
   market: '#4A90D9',
@@ -101,7 +102,7 @@ export default function LeaderPage({ params }: { params: { slug: string } }) {
           {/* Photo and Tier Badge */}
           <div className="flex flex-col items-center">
             <div className="relative w-full max-w-sm">
-              <img
+              <LazyImage
                 src={leader.image}
                 alt={leader.name}
                 width={400}
