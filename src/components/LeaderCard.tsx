@@ -109,7 +109,7 @@ export default function LeaderCard({ leader, viewMode }: LeaderCardProps) {
         <LazyImage
           src={leader.image}
           alt={leader.name}
-          className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+          className="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500"
         />
         {/* Gradient overlay */}
         <div className="absolute inset-0" style={{
