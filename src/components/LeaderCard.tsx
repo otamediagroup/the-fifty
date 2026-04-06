@@ -73,7 +73,7 @@ export default function LeaderCard({ leader, viewMode }: LeaderCardProps) {
             width={56}
             height={56}
             className="rounded-lg object-cover"
-            loading="eager"
+            loading="lazy"
           />
         </div>
 
@@ -147,7 +147,7 @@ export default function LeaderCard({ leader, viewMode }: LeaderCardProps) {
           src={leader.image}
           alt={leader.name}
           className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
-          loading="eager"
+          loading="lazy"
         />
       </div>
 
