@@ -8,55 +8,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className="sticky top-0 z-50">
-      {/* Ecosystem Bar */}
-      <div className="bg-dark border-b border-white/5 px-6 py-2">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-1">
-            <a
-              href="https://www.otamediagroup.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[10px] font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors px-2 py-1"
-            >
-              OTA Media
-            </a>
-            <span className="text-gray-600 text-[10px]">|</span>
-            <a
-              href="https://www.otamediagroup.com/off-the-agenda"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[10px] font-medium uppercase tracking-[0.15em] text-gray-500 hover:text-white transition-colors px-2 py-1"
-            >
-              Off The Agenda
-            </a>
-            <span className="text-gray-600 text-[10px]">|</span>
-            <span className="text-[10px] font-semibold uppercase tracking-[0.15em] text-gold px-2 py-1">
-              The Fifty
-            </span>
-            <span className="text-gray-600 text-[10px]">|</span>
-            <a
-              href="https://index.otamediagroup.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[10px] font-medium uppercase tracking-[0.15em] text-gray-500 hover:text-white transition-colors px-2 py-1"
-            >
-              Leadership Index
-            </a>
-          </div>
-          <a
-            href="https://www.otamediagroup.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden sm:block text-[10px] text-gray-500 hover:text-gray-300 transition-colors"
-          >
-            otamediagroup.com
-          </a>
-        </div>
-      </div>
-
-      {/* Main Nav */}
-      <div className="bg-navy px-6 py-5">
+    <nav className="sticky top-0 z-50 bg-navy px-6 py-5">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 hover:opacity-90 transition-opacity">
@@ -168,7 +120,6 @@ export default function Navbar() {
             </a>
           </div>
         </div>
-      </div>
     </nav>
   )
 }
