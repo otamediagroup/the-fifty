@@ -38,16 +38,12 @@ export default function Navbar() {
             </Link>
             <a
               href="https://index.otamediagroup.com"
-              target="_blank"
-              rel="noopener noreferrer"
               className="text-xs font-medium uppercase tracking-widest text-white hover:text-gold transition-colors"
             >
               Leadership Index
             </a>
             <a
               href="https://www.otamediagroup.com"
-              target="_blank"
-              rel="noopener noreferrer"
               className="text-xs font-medium uppercase tracking-widest text-white hover:text-gold transition-colors"
             >
               OTA Media
@@ -102,8 +98,6 @@ export default function Navbar() {
             </Link>
             <a
               href="https://index.otamediagroup.com"
-              target="_blank"
-              rel="noopener noreferrer"
               onClick={() => setIsOpen(false)}
               className="text-sm font-medium uppercase tracking-widest text-white hover:text-gold transition-colors"
             >
@@ -111,8 +105,6 @@ export default function Navbar() {
             </a>
             <a
               href="https://www.otamediagroup.com"
-              target="_blank"
-              rel="noopener noreferrer"
               onClick={() => setIsOpen(false)}
               className="text-sm font-medium uppercase tracking-widest text-white hover:text-gold transition-colors"
             >
