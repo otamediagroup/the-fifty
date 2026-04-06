@@ -93,8 +93,12 @@ export default function Home() {
           </p>
 
           {/* Main Heading */}
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight mb-6">
-            <span className="text-gold">THE FIFTY</span>
+          <h1 className="mb-6 flex justify-center">
+            <img
+              src="https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c81d5b281e5a311043f7b7_The-Fifty-Logo-Transparent.png"
+              alt="The Fifty"
+              className="h-20 sm:h-28 lg:h-36 w-auto"
+            />
           </h1>
 
           {/* Subtitle */}
