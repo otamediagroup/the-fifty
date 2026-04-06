@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import ScoreBar from './ScoreBar';
 import LazyImage from './LazyImage';
 
 interface LeaderScores {
@@ -31,17 +30,17 @@ interface LeaderCardProps {
   viewMode: 'grid' | 'list';
 }
 
-const SECTOR_COLORS: Record<string, string> = {
-  'Government & Policy': '#1A2332',
-  'Financial Services': '#0F1720',
-  'Fintech & Innovation': '#056773',
-  'Capital Markets': '#C9A84C',
-  'Professional Services': '#4A90D9',
-  'Enterprise & Growth': '#E8734A',
-  'Inclusive Capital': '#50C878',
+const SECTOR_BADGE_STYLES: Record<string, { bg: string; color: string }> = {
+  'Government & Policy': { bg: 'rgba(239, 68, 68, 0.12)', color: '#f87171' },
+  'Capital Markets': { bg: 'rgba(139, 92, 246, 0.12)', color: '#a78bfa' },
+  'Financial Services': { bg: 'rgba(59, 130, 246, 0.12)', color: '#60a5fa' },
+  'Fintech & Innovation': { bg: 'rgba(16, 185, 129, 0.12)', color: '#34d399' },
+  'Professional Services': { bg: 'rgba(245, 158, 11, 0.12)', color: '#fbbf24' },
+  'Enterprise & Growth': { bg: 'rgba(236, 72, 153, 0.12)', color: '#f472b6' },
+  'Inclusive Capital': { bg: 'rgba(6, 182, 212, 0.12)', color: '#22d3ee' },
 };
 
-const SCORE_COLORS = {
+const SCORE_COLORS: Record<string, string> = {
   market: '#4A90D9',
   reach: '#E8734A',
   policy: '#50C878',
@@ -49,202 +48,135 @@ const SCORE_COLORS = {
   culture: '#9B59B6',
 };
 
+const SCORE_LABELS: Record<string, string> = {
+  market: 'Market',
+  reach: 'Reach',
+  policy: 'Policy',
+  innovation: 'Innov.',
+  culture: 'Culture',
+};
+
 export default function LeaderCard({ leader, viewMode }: LeaderCardProps) {
   const [bioExpanded, setBioExpanded] = useState(false);
-  const sectorColor = SECTOR_COLORS[leader.sector] || '#1A2332';
-  const borderColor = leader.tier === 'power' ? '#C9A84C' : '#056773';
-  const borderWidth = 3;
+  const sectorStyle = SECTOR_BADGE_STYLES[leader.sector] || { bg: 'rgba(255,255,255,0.08)', color: '#94a3b8' };
+  const accentColor = leader.tier === 'power' ? '#C9A84C' : '#0EA5E9';
 
   if (viewMode === 'list') {
     return (
-      <div
-        className="flex items-center gap-6 p-6 rounded-lg bg-white border transition hover:shadow-lg"
-        style={{ borderLeft: `${borderWidth}px solid ${borderColor}` }}
+      <div className="flex items-center gap-4 p-4 rounded-lg transition hover:bg-white/5"
+        style={{ backgroundColor: '#1A2335', border: '1px solid rgba(255,255,255,0.06)' }}
       >
         {/* Rank */}
-        <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center bg-gray-100 rounded-lg font-bold text-lg text-gray-900">
+        <div className="flex-shrink-0 w-9 h-9 flex items-center justify-center rounded-full font-black text-sm"
+          style={{ backgroundColor: accentColor, color: '#0A0E1A' }}>
           {leader.rank}
         </div>
 
         {/* Photo */}
-        <div className="flex-shrink-0">
-          <LazyImage
-            src={leader.image}
-            alt={leader.name}
-            width={56}
-            height={56}
-            className="rounded-lg object-cover"
-          />
+        <div className="flex-shrink-0 w-11 h-11 rounded-lg overflow-hidden">
+          <LazyImage src={leader.image} alt={leader.name} width={44} height={44} className="w-full h-full object-cover" />
         </div>
 
         {/* Info */}
         <div className="flex-1 min-w-0">
           <Link href={`/leader/${leader.slug}`}>
-            <h3 className="text-lg font-semibold text-gray-900 hover:text-blue-600 truncate">
-              {leader.name}
-            </h3>
+            <h3 className="text-sm font-bold text-slate-100 hover:text-white truncate">{leader.name}</h3>
           </Link>
-          <p className="text-sm text-gray-600 truncate">{leader.role}</p>
-          <div className="flex items-center gap-3 mt-2">
-            <span
-              className="px-2.5 py-1 rounded-full text-xs font-medium text-white"
-              style={{ backgroundColor: sectorColor }}
-            >
-              {leader.sector}
-            </span>
-          </div>
+          <p className="text-xs text-slate-400 truncate">{leader.role}</p>
         </div>
+
+        {/* Category */}
+        <span className="hidden sm:inline-block px-2.5 py-1 rounded-full text-xs font-medium flex-shrink-0"
+          style={{ backgroundColor: sectorStyle.bg, color: sectorStyle.color }}>
+          {leader.sector}
+        </span>
 
         {/* Score */}
         <div className="flex-shrink-0 text-right">
-          <div className="text-2xl font-bold text-gray-900">
-            {leader.totalScore.toFixed(1)}
-          </div>
-          <p className="text-xs text-gray-500 mt-1">OTA Power Score</p>
-        </div>
-
-        {/* Mini Breakdown */}
-        <div className="flex-shrink-0 hidden sm:flex gap-1">
-          {Object.entries(leader.scores).map(([key, value]) => (
-            <div
-              key={key}
-              className="flex flex-col items-center"
-              title={`${key}: ${value.toFixed(1)}`}
-            >
-              <div
-                className="w-2 h-8 rounded-sm"
-                style={{
-                  backgroundColor: SCORE_COLORS[key as keyof typeof SCORE_COLORS],
-                  opacity: (value / 25) * 0.8 + 0.2,
-                }}
-              />
-              <span className="text-xs text-gray-600 mt-1 capitalize">
-                {key.slice(0, 1).toUpperCase()}
-              </span>
-            </div>
-          ))}
+          <div className="text-lg font-black" style={{ color: accentColor }}>{leader.totalScore}</div>
         </div>
       </div>
     );
   }
 
-  // Grid Mode
+  // Grid Mode — Webflow-style dark card
   return (
-    <div
-      className="group flex flex-col bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 relative"
-      style={{
-        border: `${borderWidth}px solid ${borderColor}`,
-      }}
+    <div className="group flex flex-col rounded-[10px] overflow-hidden transition-transform duration-300 hover:-translate-y-1"
+      style={{ backgroundColor: '#1A2335' }}
     >
-      {/* Rank Overlay */}
-      <div className="absolute top-4 right-4 z-10 w-12 h-12 flex items-center justify-center bg-black bg-opacity-70 rounded-lg text-white font-bold text-xl">
-        {leader.rank}
-      </div>
-
       {/* Image Container */}
-      <div className="relative w-full aspect-square overflow-hidden bg-gray-100">
+      <div className="relative w-full overflow-hidden" style={{ height: '280px' }}>
         <LazyImage
           src={leader.image}
           alt={leader.name}
-          className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+          className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
         />
+        {/* Gradient overlay */}
+        <div className="absolute inset-0" style={{
+          background: 'linear-gradient(180deg, transparent 50%, rgba(26,35,53,0.9) 100%)'
+        }} />
+        {/* Rank badge */}
+        <div className="absolute top-3 left-3 w-9 h-9 flex items-center justify-center rounded-full font-black text-sm"
+          style={{ backgroundColor: accentColor, color: '#0A0E1A' }}>
+          {leader.rank}
+        </div>
       </div>
 
       {/* Content */}
-      <div className="flex flex-col flex-1 p-5">
+      <div className="flex flex-col flex-1 px-5 pb-5 pt-3">
         {/* Name and Role */}
         <Link href={`/leader/${leader.slug}`}>
-          <h3 className="text-lg font-bold text-gray-900 hover:text-blue-600 transition line-clamp-2">
+          <h3 className="text-base font-black text-slate-100 hover:text-white transition line-clamp-1">
             {leader.name}
           </h3>
         </Link>
-        <p className="text-sm text-gray-600 mt-1 line-clamp-2">{leader.role}</p>
+        <p className="text-xs text-slate-400 mt-1 line-clamp-2 leading-relaxed">{leader.role}</p>
 
         {/* Sector Badge */}
-        <div className="mt-3">
-          <span
-            className="inline-block px-3 py-1 rounded-full text-xs font-medium text-white"
-            style={{ backgroundColor: sectorColor }}
-          >
+        <div className="mt-2.5">
+          <span className="inline-block px-2.5 py-1 rounded-full text-[11px] font-medium"
+            style={{ backgroundColor: sectorStyle.bg, color: sectorStyle.color }}>
             {leader.sector}
           </span>
         </div>
 
-        {/* OTA Power Score Bar */}
-        <div className="mt-4 space-y-2">
-          <div className="flex justify-between items-center">
-            <span className="text-xs font-semibold text-gray-700">
-              OTA Power Score
-            </span>
-            <span className="text-sm font-bold text-gray-900">
-              {leader.totalScore.toFixed(1)}
-            </span>
+        {/* OTA Power Score */}
+        <div className="mt-3">
+          <div className="flex justify-between items-center mb-1.5">
+            <span className="text-[11px] font-semibold text-slate-400">OTA Power Score</span>
+            <span className="text-base font-black" style={{ color: accentColor }}>{leader.totalScore}</span>
           </div>
-          <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
-            <div
-              className="h-full rounded-full transition-all duration-500"
-              style={{
-                width: `${(leader.totalScore / 100) * 100}%`,
-                backgroundColor: borderColor,
-              }}
-            />
+          <div className="w-full rounded-sm h-1 overflow-hidden" style={{ backgroundColor: 'rgba(255,255,255,0.06)' }}>
+            <div className="h-full rounded-sm transition-all duration-500"
+              style={{ width: `${leader.totalScore}%`, backgroundColor: accentColor }} />
           </div>
         </div>
 
         {/* Score Breakdown */}
-        <div className="mt-4 space-y-2 text-xs">
-          <ScoreBar
-            label="Market"
-            value={leader.scores.market}
-            color={SCORE_COLORS.market}
-          />
-          <ScoreBar
-            label="Reach"
-            value={leader.scores.reach}
-            color={SCORE_COLORS.reach}
-          />
-          <ScoreBar
-            label="Policy"
-            value={leader.scores.policy}
-            color={SCORE_COLORS.policy}
-          />
-          <ScoreBar
-            label="Innovation"
-            value={leader.scores.innovation}
-            color={SCORE_COLORS.innovation}
-          />
-          <ScoreBar
-            label="Culture"
-            value={leader.scores.culture}
-            color={SCORE_COLORS.culture}
-          />
+        <div className="grid grid-cols-5 gap-1.5 mt-3">
+          {Object.entries(leader.scores).map(([key, value]) => (
+            <div key={key} className="text-center">
+              <div className="text-xs font-bold text-slate-200">{value}</div>
+              <div className="text-[10px] text-slate-500">{SCORE_LABELS[key] || key}</div>
+            </div>
+          ))}
         </div>
 
-        {/* Bio Toggle and Expanded Bio */}
-        <div className="mt-4 pt-4 border-t border-gray-200">
+        {/* Bio Toggle */}
+        <div className="mt-3 pt-3" style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
           <button
             onClick={() => setBioExpanded(!bioExpanded)}
-            className="text-sm font-semibold text-blue-600 hover:text-blue-700 transition flex items-center gap-1"
+            className="text-xs font-semibold transition flex items-center gap-1"
+            style={{ color: accentColor }}
           >
-            {bioExpanded ? 'Hide bio' : 'Show bio'}
-            <svg
-              className={`w-4 h-4 transition ${bioExpanded ? 'rotate-180' : ''}`}
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M19 14l-7 7m0 0l-7-7m7 7V3"
-              />
+            {bioExpanded ? 'Hide bio' : 'Bio'}
+            <svg className={`w-3 h-3 transition ${bioExpanded ? 'rotate-180' : ''}`}
+              fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
           </button>
           {bioExpanded && (
-            <p className="mt-3 text-sm text-gray-700 leading-relaxed">
-              {leader.bio}
-            </p>
+            <p className="mt-2 text-xs text-slate-400 leading-relaxed">{leader.bio}</p>
           )}
         </div>
       </div>
