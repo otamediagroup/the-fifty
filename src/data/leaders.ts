@@ -80,7 +80,7 @@ export const leaders: Leader[] = [
     totalScore: 96,
     scores: { market: 25, reach: 23, policy: 19, innovation: 15, culture: 14 },
     bio: "CEO of London Stock Exchange since 2021. Previously at the FCA and Bank of England; instrumental in driving UK capital markets reform and listing competitiveness.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c66654b3a7bf42b8e76b2e_68a68ca10baad8d1700f218a_Julia%20Hoggett%20T03.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c666b196dbf9e7f74cfcbe_Dame%20Julia%20Hoggett%20T08.jpg",
   },
   {
     rank: 4,
@@ -92,7 +92,7 @@ export const leaders: Leader[] = [
     totalScore: 95,
     scores: { market: 23, reach: 24, policy: 19, innovation: 15, culture: 14 },
     bio: "Chief Executive of the FCA since 2020, reappointed until 2030. Former London Stock Exchange CEO, driving regulation of crypto, ESG, and consumer protection.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c66654e31a547a3dab5b29_Nikhil%20Rathi%20T08.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c66654adf1bcc0fdde6ce6_Nikhil%20Rathi%20T07.jpg",
   },
   {
     rank: 5,
@@ -104,7 +104,7 @@ export const leaders: Leader[] = [
     totalScore: 94,
     scores: { market: 24, reach: 23, policy: 18, innovation: 14, culture: 15 },
     bio: "Group Chief Executive of Barclays since 2021. Previously Chief Risk Officer; oversees one of the UK's largest universal banks.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c666543e2b4de2f5b8b7e1_CS%20Venkatakrishnan%20T04.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c6665488d456d6d4f637b6_C.S.%20Venkatakrishnan%20T10.jpg",
   },
   {
     rank: 6,
@@ -116,7 +116,7 @@ export const leaders: Leader[] = [
     totalScore: 93,
     scores: { market: 24, reach: 22, policy: 18, innovation: 14, culture: 15 },
     bio: "Group Chief Executive of Lloyds Banking Group since 2021. Leads the UK's largest retail and commercial bank with a digital-first transformation strategy.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c666546c459e80b0e1da6e_Charlie%20Nunn%20T06.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c66654422ec5df88b5bb2b_Charlie%20Nunn%20T06.jpg",
   },
   {
     rank: 7,
@@ -128,7 +128,7 @@ export const leaders: Leader[] = [
     totalScore: 92,
     scores: { market: 24, reach: 22, policy: 17, innovation: 14, culture: 15 },
     bio: "Group Chief Executive of HSBC since 2024. Career HSBC banker with over 20 years spanning investment banking and capital markets.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c666546c459e80b0e1da7c_Georges%20Elhedery%20T07.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c666b1d925cc63467eda69_Georges%20Elhedery%20T05.jpg",
   },
   {
     rank: 8,
@@ -140,7 +140,7 @@ export const leaders: Leader[] = [
     totalScore: 91,
     scores: { market: 24, reach: 22, policy: 17, innovation: 14, culture: 14 },
     bio: "Chief Executive of London Stock Exchange Group since 2018. Previously at Goldman Sachs for 20 years; driving LSEG's transformation into a global data and analytics leader.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c666546fe60a62d80bfb40_David%20Schwimmer%20T05.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c666545edfa1592b9182e1_David%20Schwimmer%20T02.jpg",
   },
   {
     rank: 9,
@@ -152,7 +152,7 @@ export const leaders: Leader[] = [
     totalScore: 90,
     scores: { market: 22, reach: 21, policy: 17, innovation: 16, culture: 14 },
     bio: "Co-founder and CEO of Revolut, one of Europe's leading fintech firms valued at $45bn. Built from a £1,500 personal loan into a global financial super-app.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c66654b3a7bf42b8e76b04_Storonsky%20T09.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c66654efd8cebfc76ce10f_Nikolay%20Storonsky%20T03.jpg",
   },
   {
     rank: 10,
@@ -164,7 +164,7 @@ export const leaders: Leader[] = [
     totalScore: 89,
     scores: { market: 23, reach: 21, policy: 17, innovation: 14, culture: 14 },
     bio: "Chief Executive of Nationwide Building Society. Previously CEO of TSB; leads the world's largest building society with £270bn+ in assets.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c66654e31a547a3dab5b1b_Debbie%20Crosbie%20T10.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c66654f3b50821a0174290_Debbie%20Crosbie%20T04.jpg",
   },
   {
     rank: 11,
@@ -176,7 +176,7 @@ export const leaders: Leader[] = [
     totalScore: 88,
     scores: { market: 22, reach: 21, policy: 16, innovation: 15, culture: 14 },
     bio: "Co-founder and CEO of Wise, transforming cross-border payments globally. Wise went public on the LSE in 2021; now serves 16M+ customers.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c66654aa23e37f37f0e1bb_Kristo%20Kaarmann%20T11.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c6597a5a43ddc50d834eb1_Kristo%20Ka%CC%88a%CC%88rmann%20T003.jpg",
   },
   {
     rank: 12,
@@ -188,7 +188,7 @@ export const leaders: Leader[] = [
     totalScore: 87,
     scores: { market: 22, reach: 21, policy: 17, innovation: 13, culture: 14 },
     bio: "Deputy Governor for Prudential Regulation and CEO of the PRA since 2016. Oversees prudential supervision of 1,500+ banks, insurers, and major investment firms.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c66654d8cf22cb1b4e6b6f_Sam%20Woods%20T12.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c6597a6194df6816769138_Sam%20Woods%20T005.jpg",
   },
   {
     rank: 13,
@@ -200,7 +200,7 @@ export const leaders: Leader[] = [
     totalScore: 86,
     scores: { market: 21, reach: 21, policy: 17, innovation: 13, culture: 14 },
     bio: "Chief Financial Officer of the Bank of England. First Black woman to serve on the Bank's Court of Directors.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c66654b3a7bf42b8e76b17_Afua%20Kyei%20C07.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c6597a53ef29d94cc8eb41_Afua%20Kyei%20T002.jpg",
   },
   {
     rank: 14,
@@ -212,7 +212,7 @@ export const leaders: Leader[] = [
     totalScore: 85,
     scores: { market: 20, reach: 20, policy: 17, innovation: 15, culture: 13 },
     bio: "Chair of ARIA. Co-founder of Entrepreneur First; appointed UK's AI adviser and played a key role in organising the UK AI Safety Summit at Bletchley Park.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c67e2bba0f1f54d3e2a814_Matt%20Clifford%20T14.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c6597a5e6484d9077665b0_Matt%20Clifford%20CBE%20T001.jpg",
   },
   {
     rank: 15,
@@ -224,7 +224,7 @@ export const leaders: Leader[] = [
     totalScore: 84,
     scores: { market: 22, reach: 20, policy: 17, innovation: 12, culture: 13 },
     bio: "Chair of Prudential plc and former UK government minister. Central role in the UK's response to the 2008 financial crisis; influential across policy and finance.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c67e2bba0f1f54d3e2a80a_Shriti%20Vadera%20T15.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c6597a5592e03b20a0be62_Baroness%20Shriti%20Vadera%20T004.jpg",
   },
   {
     rank: 16,
@@ -236,7 +236,7 @@ export const leaders: Leader[] = [
     totalScore: 83,
     scores: { market: 21, reach: 20, policy: 16, innovation: 13, culture: 13 },
     bio: "Chair of Barnett Waddingham and founder of the 30% Club. Pioneering advocate for gender diversity in finance.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c67e2b2c4b50c2aba53e97_Helena%20Morrissey%20T16.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c6597a6ed7e5d8bfd783f8_Baroness%20Helena%20Morrissey%20T006.jpg",
   },
   {
     rank: 17,
@@ -248,7 +248,7 @@ export const leaders: Leader[] = [
     totalScore: 82,
     scores: { market: 19, reach: 20, policy: 17, innovation: 13, culture: 13 },
     bio: "Secretary of State for Business and Trade, focusing on economic growth through digital innovation and industrial strategy.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c67e2b563e18a275175790_Peter%20Kyle%20T17.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c6597ad51763a96936f9e9_Peter%20Kyle%20T007.jpg",
   },
   {
     rank: 18,
@@ -260,7 +260,7 @@ export const leaders: Leader[] = [
     totalScore: 81,
     scores: { market: 20, reach: 20, policy: 15, innovation: 13, culture: 13 },
     bio: "Chair of KPMG UK. First woman and first person of colour to chair the firm; MBE for services to business and diversity.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c67e2b8802e7cf58bc33c2_Bina%20Mehta%20T18.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c6597a6cf5855d42569ba6_Bina%20Mehta%20MBE%20T008.jpg",
   },
   {
     rank: 19,
@@ -272,7 +272,7 @@ export const leaders: Leader[] = [
     totalScore: 80,
     scores: { market: 20, reach: 19, policy: 15, innovation: 13, culture: 13 },
     bio: "Chief Executive of Forterro, a European enterprise software group. One of few Black CEOs of a billion-pound tech company in Europe.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c67e2bb02b8d4e9cd09c46_Dean%20Forbes%20T19.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c6597a9be8bcd4289e43a8_Dean%20Forbes%20T009.jpg",
   },
   {
     rank: 20,
@@ -284,7 +284,7 @@ export const leaders: Leader[] = [
     totalScore: 79,
     scores: { market: 20, reach: 19, policy: 15, innovation: 12, culture: 13 },
     bio: "Deputy Chair of the BBC Board. Former Managing Partner of Permira; one of the most prominent Black business leaders in the UK.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c67e2b563e18a2751757a1_Damon%20Buffini%20T20.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c6597a53b162560180238c_Sir%20Damon%20Buffini%20T0010.jpg",
   },
   {
     rank: 21,
@@ -296,7 +296,7 @@ export const leaders: Leader[] = [
     totalScore: 78,
     scores: { market: 20, reach: 19, policy: 14, innovation: 12, culture: 13 },
     bio: "Economist and board director at Chevron, Condé Nast, and 3M. Author of four bestselling books on global economics.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c67e2b2c4b50c2aba53eca_Dambisa%20Moyo%20C01.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c67e1b212207cd95431c81_Dambisa%20Moyo%20C09.jpg",
   },
   {
     rank: 22,
@@ -308,7 +308,7 @@ export const leaders: Leader[] = [
     totalScore: 77,
     scores: { market: 19, reach: 19, policy: 14, innovation: 13, culture: 12 },
     bio: "Founder and CEO of PensionBee, the UK's leading online pension provider founded in 2014. Previously at Goldman Sachs and Morgan Stanley.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c67e2b563e18a2751757c0_Romi%20Savova%20C02.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c67e1b05d71e20f9eb015a_Romi%20Savova%20C08.jpg",
   },
   {
     rank: 23,
@@ -320,7 +320,7 @@ export const leaders: Leader[] = [
     totalScore: 76,
     scores: { market: 19, reach: 19, policy: 14, innovation: 12, culture: 12 },
     bio: "The 697th Lord Mayor of London and the first to use the title Lady Mayor. Non-Executive Chair of Gallagher UK.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69d27f3857ddfdd3993b1ff1_Dame%20Susan%20Langley%20DBE.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69cea38d8275802087bd5d27_Dame%20Susan%20Langley%20v2.jpg",
   },
   {
     rank: 24,
@@ -332,7 +332,7 @@ export const leaders: Leader[] = [
     totalScore: 75,
     scores: { market: 18, reach: 19, policy: 14, innovation: 13, culture: 11 },
     bio: "Co-founder of Songkick and Chair of the UK AI Safety Institute. Led the Frontier AI Taskforce; influential in shaping global AI governance.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c67e2bb02b8d4e9cd09c5b_Ian%20Hogarth%20C05.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c67e1b9a2ccbd2709ef40d_Ian%20Hogarth%20C06.jpg",
   },
   {
     rank: 25,
@@ -344,7 +344,7 @@ export const leaders: Leader[] = [
     totalScore: 74,
     scores: { market: 19, reach: 18, policy: 14, innovation: 12, culture: 11 },
     bio: "Senior Partner of Freshfields Bruckhaus Deringer. First woman to lead the firm in its 280-year history.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c67e2bba0f1f54d3e2a82f_Georgia%20Dawson%20C06.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c67e1bda0fb6b1551765e3_Dawson%20Georgia%20C05.jpg",
   },
   {
     rank: 26,
@@ -380,7 +380,7 @@ export const leaders: Leader[] = [
     totalScore: 71,
     scores: { market: 20, reach: 17, policy: 12, innovation: 10, culture: 12 },
     bio: "Managing Director of BlackRock UK & Ireland. Oversees one of the world's largest asset managers in the UK market.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c67e2b8802e7cf58bc33ce_Gavin%20Lewis%20C08.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c67e2b197b204000092c7f_Gavin%20Lewis%20C02.jpg",
   },
   {
     rank: 29,
@@ -392,7 +392,7 @@ export const leaders: Leader[] = [
     totalScore: 70,
     scores: { market: 18, reach: 17, policy: 14, innovation: 10, culture: 11 },
     bio: "Founder of SCM Direct and MoneyShe. High-profile campaigner for transparency in financial services and constitutional accountability.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c67e2bba0f1f54d3e2a826_Gina%20Miller%20C09.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c67e0b487784e5d6e98147_Gina%20Miller%20C10.jpg",
   },
   {
     rank: 30,
@@ -404,7 +404,7 @@ export const leaders: Leader[] = [
     totalScore: 69,
     scores: { market: 17, reach: 17, policy: 13, innovation: 11, culture: 11 },
     bio: "Co-Founder of Impact X Capital. MBE for services to technology and diversity; formerly CTO at Mastercard Labs.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c67e2b2c4b50c2aba53ea3_Ezechi%20Britton%20C10.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c67e2b602d5bd484c1363f_Ezechi%20Britton%20C01.jpg",
   },
   {
     rank: 31,
@@ -416,7 +416,7 @@ export const leaders: Leader[] = [
     totalScore: 68,
     scores: { market: 17, reach: 17, policy: 13, innovation: 11, culture: 10 },
     bio: "Partner at Passion Capital. Former HM Treasury Special Envoy for FinTech; MBE for services to business and the fintech industry.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c67e2bb02b8d4e9cd09c4f_Eileen%20Burbidge%20C11.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c693df1d2fea69b0b9a038_Eileen%20Burbidge%20MBE%20A01.jpg",
   },
   {
     rank: 32,
@@ -428,7 +428,7 @@ export const leaders: Leader[] = [
     totalScore: 67,
     scores: { market: 18, reach: 16, policy: 12, innovation: 11, culture: 10 },
     bio: "Co-Founder and Managing Partner of LocalGlobe. Early investor in Wise, Zoopla, and Robinhood; OBE for services to business.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c67e2bba0f1f54d3e2a7f4_Saul%20Klein%20C12.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c693c8ac7d937dc54d5621_Saul%20Klein%20A02.jpg",
   },
   {
     rank: 33,
@@ -440,7 +440,7 @@ export const leaders: Leader[] = [
     totalScore: 66,
     scores: { market: 17, reach: 16, policy: 12, innovation: 11, culture: 10 },
     bio: "Managing Partner of HaysMac, a top-25 UK accounting firm. Champion of entrepreneurial businesses and creative industries.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c67e2b563e18a275175807_Natasha%20Frangos%20C13.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c693bf4b68d11cf82201a4_Natasha%20Frangos%20A03.jpg",
   },
   {
     rank: 34,
@@ -452,7 +452,7 @@ export const leaders: Leader[] = [
     totalScore: 65,
     scores: { market: 16, reach: 16, policy: 12, innovation: 11, culture: 10 },
     bio: "Founder and CEO of Powerful Media Group. Creator of the annual Powerlist celebrating influential Black Britons.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c67e2bba0f1f54d3e2a81c_Michael%20Eboda%20C14.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c69379a8de6bfd04520a36_Michael%20Eboda%20A04.jpg",
   },
   {
     rank: 35,
@@ -464,7 +464,7 @@ export const leaders: Leader[] = [
     totalScore: 64,
     scores: { market: 15, reach: 16, policy: 13, innovation: 10, culture: 10 },
     bio: "UK Small Business Commissioner. Founder of Enterprise Nation; CBE for services to small businesses and enterprise.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c67e2b563e18a275175818_Emma%20Jones%20C15.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c6936c2e6f293dbceb57b0_Emma%20Jones%20CBE%20A05.jpg",
   },
   {
     rank: 36,
@@ -476,7 +476,7 @@ export const leaders: Leader[] = [
     totalScore: 63,
     scores: { market: 16, reach: 15, policy: 11, innovation: 11, culture: 10 },
     bio: "Co-founder and Managing Partner of Seedcamp, backing Wise, Revolut, and UiPath. MBE for services to business.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c67e2b8802e7cf58bc33d8_Reshma%20Sohoni%20C16.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c693677ad3694127a8716d_Reshma%20Sohoni%20A06.jpg",
   },
   {
     rank: 37,
@@ -488,7 +488,7 @@ export const leaders: Leader[] = [
     totalScore: 62,
     scores: { market: 15, reach: 15, policy: 11, innovation: 11, culture: 10 },
     bio: "Founder of Exponential View, analysing the intersection of technology, society, and economics. Author of 'The Exponential Age'.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c67e2bb02b8d4e9cd09c6c_Azeem%20Azhar%20C17.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c69362ff0900e39ac833bb_Azeem%20Azhar%20A07.jpg",
   },
   {
     rank: 38,
@@ -500,7 +500,7 @@ export const leaders: Leader[] = [
     totalScore: 61,
     scores: { market: 16, reach: 15, policy: 11, innovation: 10, culture: 9 },
     bio: "HM Lord-Lieutenant of Greater London. First Black Lord-Lieutenant in the City's history; prominent director and philanthropist.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c67e2b563e18a2751757b2_Kenneth%20Olisa%20C18.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c6935cc1b9e52d36151e9c_Sir%20Kenneth%20Olisa%20A08.jpg",
   },
   {
     rank: 39,
@@ -512,7 +512,7 @@ export const leaders: Leader[] = [
     totalScore: 60,
     scores: { market: 16, reach: 15, policy: 10, innovation: 10, culture: 9 },
     bio: "Former Lord Mayor of the City of London. Senior adviser at PwC; champion of the City's global competitiveness and fintech innovation.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c67e2b2c4b50c2aba53eb5_Charles%20Bowman%20C19.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c6a18dce3bf32dde31bf2d_Sir%20Charles%20Bowman%20A010.jpg",
   },
   {
     rank: 40,
@@ -524,7 +524,7 @@ export const leaders: Leader[] = [
     totalScore: 59,
     scores: { market: 16, reach: 14, policy: 11, innovation: 9, culture: 9 },
     bio: "Chair of EY UK. Leads one of the Big Four accounting firms; extensive experience in audit and professional services.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c67e2b2c4b50c2aba53edb_Alison%20Duncan%20C20.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c6933f2ec28a2ce19ca87a_Alison%20Duncan%20A09.jpg",
   },
   {
     rank: 41,
@@ -536,7 +536,7 @@ export const leaders: Leader[] = [
     totalScore: 58,
     scores: { market: 14, reach: 14, policy: 9, innovation: 11, culture: 10 },
     bio: "Former co-founder of Social Chain. BBC Dragons' Den panellist; one of the UK's most prominent young entrepreneurs and content creators.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c67e2bba0f1f54d3e2a83e_Steven%20Bartlett%20C21.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c6a1a048b747bc82d9e9a6_Steven%20Bartlett%20B07.jpg",
   },
   {
     rank: 42,
@@ -548,7 +548,7 @@ export const leaders: Leader[] = [
     totalScore: 57,
     scores: { market: 14, reach: 14, policy: 10, innovation: 10, culture: 9 },
     bio: "Co-founding Partner at Ada Ventures and CEO of Diversity VC. MBE for services to diversity in venture capital.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c67e2b563e18a2751757d2_Check%20Warner%20C22.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c6a522db7a0259f63b9547_Check%20Warner%20B011.jpg",
   },
   {
     rank: 43,
@@ -560,7 +560,7 @@ export const leaders: Leader[] = [
     totalScore: 56,
     scores: { market: 15, reach: 13, policy: 10, innovation: 10, culture: 8 },
     bio: "Founder of Zepz (WorldRemit), a global digital payments company. Pioneer in mobile money transfers to emerging markets.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c67e2bb02b8d4e9cd09c79_Ismail%20Ahmed%20C23.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c6a2dd294f61f9bed512f4_Ismail%20B010Ahmed.jpg",
   },
   {
     rank: 44,
@@ -572,7 +572,7 @@ export const leaders: Leader[] = [
     totalScore: 55,
     scores: { market: 15, reach: 13, policy: 10, innovation: 9, culture: 8 },
     bio: "Chief Executive of Next plc since 2001. Life peer; one of the longest-serving and most respected retail CEOs in the UK.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c67e2bb02b8d4e9cd09c87_Simon%20Wolfson%20C24.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c6a1ca61a694931325e0e3_Simon%20Wolfson%20Lord%20Wolfson%20B09.jpg",
   },
   {
     rank: 45,
@@ -584,7 +584,7 @@ export const leaders: Leader[] = [
     totalScore: 54,
     scores: { market: 14, reach: 13, policy: 9, innovation: 10, culture: 8 },
     bio: "Co-founder and former CEO of Jellyfish, grown to $335M revenue with 2,200+ employees across 28 offices worldwide.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c67e2b8802e7cf58bc33f0_Rob%20Pierre%20C25.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69cba86b02ed9b8d3f012aa7_bd8a532647a72d86f868c40e1618cf60_Rob%20Pierre%20B0012.jpg",
   },
   {
     rank: 46,
@@ -596,7 +596,7 @@ export const leaders: Leader[] = [
     totalScore: 53,
     scores: { market: 13, reach: 13, policy: 9, innovation: 9, culture: 9 },
     bio: "Entrepreneur, musician, and investor. Creator of Reggae Reggae Sauce; built a diverse food and entertainment enterprise.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c67e2b8802e7cf58bc33e4_Levi%20Roots%20C26.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c6a1a003a4b277aceea20f_Levi%20Roots%20B06.jpg",
   },
   {
     rank: 47,
@@ -608,7 +608,7 @@ export const leaders: Leader[] = [
     totalScore: 52,
     scores: { market: 14, reach: 12, policy: 9, innovation: 8, culture: 9 },
     bio: "Vice-Chair of West Ham United FC. Star of BBC's The Apprentice; one of Britain's most prominent female business leaders.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c67e2b2c4b50c2aba53ee9_Karren%20Brady%20C27.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c6a1a2af3fe1e954455474_Baroness%20Karren%20Brady%20B05.jpg",
   },
   {
     rank: 48,
@@ -620,7 +620,7 @@ export const leaders: Leader[] = [
     totalScore: 51,
     scores: { market: 14, reach: 12, policy: 9, innovation: 8, culture: 8 },
     bio: "CEO and Co-Founder of Amadeus Capital Partners. CBE for services to business; leading European technology venture capital investor.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c67e2b563e18a2751757e6_Anne%20Glover%20C28.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c6a194c9e641afe77c1089_Anne%20Glover%20B01.jpg",
   },
   {
     rank: 49,
@@ -632,7 +632,7 @@ export const leaders: Leader[] = [
     totalScore: 50,
     scores: { market: 13, reach: 12, policy: 9, innovation: 8, culture: 8 },
     bio: "Founder of Tech London Advocates. CBE for services to the technology sector; championing London as a global tech hub.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c67e2bba0f1f54d3e2a849_Russ%20Shaw%20C29.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c8ee655e2533a43adbb419_Russ%20Shaw%20CBE%20B04.jpg",
   },
   {
     rank: 50,
@@ -644,7 +644,7 @@ export const leaders: Leader[] = [
     totalScore: 49,
     scores: { market: 13, reach: 11, policy: 9, innovation: 8, culture: 8 },
     bio: "Entrepreneur and fintech founder of Snoop; former CEO of Virgin Money. CBE for services to financial services and women in finance.",
-    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c67e2b563e18a2751757f8_Jayne-Anne%20Gadhia%20C30.jpg",
+    image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c6a1a0c235d2ad3aa97adc_Dame%20Jayne-Anne%20B02.jpg",
   },
 ];
 
