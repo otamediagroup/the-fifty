@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import ScoreBar from './ScoreBar';
 
@@ -68,12 +67,13 @@ export default function LeaderCard({ leader, viewMode }: LeaderCardProps) {
 
         {/* Photo */}
         <div className="flex-shrink-0">
-          <Image
+          <img
             src={leader.image}
             alt={leader.name}
             width={56}
             height={56}
             className="rounded-lg object-cover"
+            loading="eager"
           />
         </div>
 
@@ -143,11 +143,11 @@ export default function LeaderCard({ leader, viewMode }: LeaderCardProps) {
 
       {/* Image Container */}
       <div className="relative w-full aspect-square overflow-hidden bg-gray-100">
-        <Image
+        <img
           src={leader.image}
           alt={leader.name}
-          fill
-          className="object-cover group-hover:scale-105 transition duration-300"
+          className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+          loading="eager"
         />
       </div>
 
