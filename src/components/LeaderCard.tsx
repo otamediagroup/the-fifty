@@ -111,9 +111,9 @@ export default function LeaderCard({ leader, viewMode }: LeaderCardProps) {
           alt={leader.name}
           className="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500"
         />
-        {/* Gradient overlay */}
+        {/* Subtle bottom gradient */}
         <div className="absolute inset-0" style={{
-          background: 'linear-gradient(180deg, transparent 50%, rgba(26,35,53,0.9) 100%)'
+          background: 'linear-gradient(180deg, transparent 80%, rgba(26,35,53,0.4) 100%)'
         }} />
         {/* Rank badge */}
         <div className="absolute top-3 left-3 w-9 h-9 flex items-center justify-center rounded-full font-black text-sm"
