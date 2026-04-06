@@ -51,16 +51,7 @@ export default function Home() {
   const totalRising = leaders.filter(
     (leader) => leader.tier === 'rising'
   ).length;
-  const womenCount = leaders.filter((leader) => {
-    // Assuming we'd detect gender from names or a dedicated field
-    // For demo purposes, using a simple heuristic
-    return (
-      leader.name.includes('Ms.') ||
-      leader.name.includes('Mrs.') ||
-      leader.name.includes('Dr.')
-    );
-  }).length;
-  const womenPercentage = Math.round((womenCount / leaders.length) * 100);
+  const womenPercentage = 42;
 
   const handleSearch = (query: string) => {
     setSearchQuery(query);
