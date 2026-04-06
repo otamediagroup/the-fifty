@@ -5,152 +5,168 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 export default function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className="sticky top-0 z-50 bg-dark border-b border-gray-800">
-      {/* Ecosystem bar */}
-      <div className="bg-navy border-b border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
-          <div className="flex items-center justify-between text-xs md:text-sm">
-            <div className="flex items-center gap-4 md:gap-6 flex-wrap">
-              <a
-                href="https://www.otamediagroup.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-gold transition-colors"
-              >
-                OTA Media
-              </a>
-              <a
-                href="https://www.otamediagroup.com/off-the-agenda"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-gold transition-colors"
-              >
-                Off The Agenda
-              </a>
-              <span className="text-gold font-medium">The Fifty</span>
-              <a
-                href="https://index.otamediagroup.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-gold transition-colors"
-              >
-                Leadership Index
-              </a>
-            </div>
+    <nav className="sticky top-0 z-50">
+      {/* Ecosystem Bar */}
+      <div className="bg-dark border-b border-white/5 px-6 py-2">
+        <div className="max-w-7xl mx-auto flex items-center justify-between">
+          <div className="flex items-center gap-1">
             <a
               href="https://www.otamediagroup.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-gold transition-colors"
+              className="text-[10px] font-bold uppercase tracking-[0.15em] text-gray-400 hover:text-white transition-colors px-2 py-1"
             >
-              otamediagroup.com
+              OTA Media
+            </a>
+            <span className="text-gray-600 text-[10px]">|</span>
+            <a
+              href="https://www.otamediagroup.com/off-the-agenda"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[10px] font-medium uppercase tracking-[0.15em] text-gray-500 hover:text-white transition-colors px-2 py-1"
+            >
+              Off The Agenda
+            </a>
+            <span className="text-gray-600 text-[10px]">|</span>
+            <span className="text-[10px] font-semibold uppercase tracking-[0.15em] text-gold px-2 py-1">
+              The Fifty
+            </span>
+            <span className="text-gray-600 text-[10px]">|</span>
+            <a
+              href="https://index.otamediagroup.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[10px] font-medium uppercase tracking-[0.15em] text-gray-500 hover:text-white transition-colors px-2 py-1"
+            >
+              Leadership Index
             </a>
           </div>
+          <a
+            href="https://www.otamediagroup.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden sm:block text-[10px] text-gray-500 hover:text-gray-300 transition-colors"
+          >
+            otamediagroup.com
+          </a>
         </div>
       </div>
 
-      {/* Main nav */}
-      <div className="bg-dark">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            {/* Logo/Title */}
+      {/* Main Nav */}
+      <div className="bg-navy px-6 py-5">
+        <div className="max-w-7xl mx-auto flex items-center justify-between">
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-3 hover:opacity-90 transition-opacity">
+            <Image
+              src="https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69cce2536388514ed0b381e0_The%20FIFTY%20White%20Logo.png"
+              alt="The Fifty"
+              width={140}
+              height={40}
+              className="h-8 md:h-10 w-auto"
+              priority
+            />
+          </Link>
+
+          {/* Desktop nav */}
+          <div className="hidden md:flex gap-6 items-center">
+            <a
+              href="/#rankings"
+              className="text-xs font-medium uppercase tracking-widest text-white hover:text-gold transition-colors"
+            >
+              Rankings
+            </a>
             <Link
-              href="/"
-              className="flex items-center gap-2 hover:opacity-90 transition-opacity"
+              href="/methodology"
+              className="text-xs font-medium uppercase tracking-widest text-white hover:text-gold transition-colors"
             >
-              <Image
-                src="https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69cce2536388514ed0b381e0_The%20FIFTY%20White%20Logo.png"
-                alt="The Fifty"
-                width={140}
-                height={40}
-                className="h-8 md:h-10 w-auto"
-                priority
-              />
+              Methodology
             </Link>
-
-            {/* Desktop nav links */}
-            <div className="hidden md:flex items-center gap-8">
-              <a
-                href="/#rankings"
-                className="text-gray-300 hover:text-gold transition-colors"
-              >
-                Rankings
-              </a>
-              <Link
-                href="/methodology"
-                className="text-gray-300 hover:text-gold transition-colors"
-              >
-                Methodology
-              </Link>
-              <a
-                href="https://index.otamediagroup.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-300 hover:text-gold transition-colors"
-              >
-                Leadership Index
-              </a>
-            </div>
-
-            {/* Mobile hamburger button */}
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden inline-flex items-center justify-center p-2 text-gray-400 hover:text-gold"
-              aria-label="Toggle menu"
+            <a
+              href="https://index.otamediagroup.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs font-medium uppercase tracking-widest text-white hover:text-gold transition-colors"
             >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                {isMenuOpen ? (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                ) : (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                )}
-              </svg>
-            </button>
+              Leadership Index
+            </a>
+            <a
+              href="https://www.otamediagroup.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs font-medium uppercase tracking-widest text-white hover:text-gold transition-colors"
+            >
+              OTA Media
+            </a>
           </div>
 
-          {/* Mobile menu */}
-          {isMenuOpen && (
-            <div className="md:hidden pb-4 border-t border-gray-800">
-              <a
-                href="/#rankings"
-                className="block px-2 py-2 text-gray-300 hover:text-gold transition-colors"
-              >
-                Rankings
-              </a>
-              <Link
-                href="/methodology"
-                className="block px-2 py-2 text-gray-300 hover:text-gold transition-colors"
-              >
-                Methodology
-              </Link>
-              <a
-                href="https://index.otamediagroup.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block px-2 py-2 text-gray-300 hover:text-gold transition-colors"
-              >
-                Leadership Index
-              </a>
-            </div>
-          )}
+          {/* Hamburger button — animated */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="flex md:hidden flex-col gap-[5px] p-1 cursor-pointer"
+            aria-label="Toggle navigation menu"
+            aria-expanded={isOpen}
+          >
+            <span
+              className={`block w-6 h-[2px] bg-white transition-transform duration-300 ${
+                isOpen ? 'translate-y-[7px] rotate-45' : ''
+              }`}
+            />
+            <span
+              className={`block w-6 h-[2px] bg-white transition-opacity duration-300 ${
+                isOpen ? 'opacity-0' : ''
+              }`}
+            />
+            <span
+              className={`block w-6 h-[2px] bg-white transition-transform duration-300 ${
+                isOpen ? '-translate-y-[7px] -rotate-45' : ''
+              }`}
+            />
+          </button>
+        </div>
+
+        {/* Mobile menu */}
+        <div
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+            isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          }`}
+        >
+          <div className="flex flex-col gap-4 pt-6 pb-2 border-t border-white/10 mt-5">
+            <a
+              href="/#rankings"
+              onClick={() => setIsOpen(false)}
+              className="text-sm font-medium uppercase tracking-widest text-white hover:text-gold transition-colors"
+            >
+              Rankings
+            </a>
+            <Link
+              href="/methodology"
+              onClick={() => setIsOpen(false)}
+              className="text-sm font-medium uppercase tracking-widest text-white hover:text-gold transition-colors"
+            >
+              Methodology
+            </Link>
+            <a
+              href="https://index.otamediagroup.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsOpen(false)}
+              className="text-sm font-medium uppercase tracking-widest text-white hover:text-gold transition-colors"
+            >
+              Leadership Index
+            </a>
+            <a
+              href="https://www.otamediagroup.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsOpen(false)}
+              className="text-sm font-medium uppercase tracking-widest text-white hover:text-gold transition-colors"
+            >
+              OTA Media
+            </a>
+          </div>
         </div>
       </div>
     </nav>
