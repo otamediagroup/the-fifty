@@ -112,17 +112,26 @@ export default function LeaderCard({ leader, viewMode }: LeaderCardProps) {
   }
 
   // Grid Mode — Webflow-style dark card
-  const handleBioToggle = (e: React.MouseEvent) => {
+  const handleBioToggle = (e: React.MouseEvent | React.KeyboardEvent) => {
     e.preventDefault();
     e.stopPropagation();
     setBioExpanded(!bioExpanded);
   };
 
+  const handleBioKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      handleBioToggle(e);
+    }
+  };
+
   return (
     <Link
       href={`/leader/${leader.slug}`}
-      className="group block rounded-[10px] overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:ring-2 hover:ring-offset-2 hover:ring-offset-dark cursor-pointer"
-      style={{ backgroundColor: '#1A2335', boxShadow: '0 1px 0 rgba(255,255,255,0.04) inset' }}
+      className="group block rounded-[10px] overflow-hidden transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+      style={{
+        backgroundColor: '#1A2335',
+        border: '1px solid rgba(255,255,255,0.06)',
+      }}
     >
       <div className="flex flex-col h-full">
         {/* Image Container */}
@@ -185,18 +194,22 @@ export default function LeaderCard({ leader, viewMode }: LeaderCardProps) {
           {/* Footer: Bio toggle + View profile CTA */}
           <div className="mt-3 pt-3 flex items-center justify-between gap-2"
             style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
-            <button
+            <span
+              role="button"
+              tabIndex={0}
               onClick={handleBioToggle}
-              className="text-xs font-semibold transition flex items-center gap-1 hover:opacity-80"
+              onKeyDown={handleBioKeyDown}
+              className="text-xs font-semibold transition flex items-center gap-1 hover:opacity-80 cursor-pointer select-none"
               style={{ color: '#94a3b8' }}
               aria-label={bioExpanded ? 'Hide short bio' : 'Show short bio'}
+              aria-expanded={bioExpanded}
             >
               {bioExpanded ? 'Hide bio' : 'Quick bio'}
               <svg className={`w-3 h-3 transition ${bioExpanded ? 'rotate-180' : ''}`}
                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
-            </button>
+            </span>
             <span
               className="text-xs font-bold flex items-center gap-1 group-hover:translate-x-0.5 transition"
               style={{ color: accentColor }}
