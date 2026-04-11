@@ -100,14 +100,12 @@ export default function LeaderPage({ params }: { params: { slug: string } }) {
         {/* Hero Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16 items-start">
           {/* Photo and Tier Badge */}
-          <div className="flex flex-col items-center">
-            <div className="relative w-full max-w-sm">
+          <div className="flex flex-col items-center md:items-start">
+            <div className="relative w-full max-w-sm aspect-square rounded-2xl overflow-hidden">
               <LazyImage
                 src={leader.image}
                 alt={leader.name}
-                width={400}
-                height={400}
-                className="rounded-2xl object-cover w-full h-auto"
+                className="w-full h-full object-cover object-[center_20%]"
               />
               {/* Rank Badge */}
               <div

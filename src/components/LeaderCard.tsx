@@ -63,7 +63,9 @@ export default function LeaderCard({ leader, viewMode }: LeaderCardProps) {
 
   if (viewMode === 'list') {
     return (
-      <div className="flex items-center gap-4 p-4 rounded-lg transition hover:bg-white/5"
+      <Link
+        href={`/leader/${leader.slug}`}
+        className="group flex items-center gap-4 p-4 rounded-lg transition hover:bg-white/5 cursor-pointer"
         style={{ backgroundColor: '#1A2335', border: '1px solid rgba(255,255,255,0.06)' }}
       >
         {/* Rank */}
@@ -74,14 +76,15 @@ export default function LeaderCard({ leader, viewMode }: LeaderCardProps) {
 
         {/* Photo */}
         <div className="flex-shrink-0 w-11 h-11 rounded-lg overflow-hidden">
-          <LazyImage src={leader.image} alt={leader.name} width={44} height={44} className="w-full h-full object-cover" />
+          <LazyImage src={leader.image} alt={leader.name} className="w-full h-full object-cover" />
         </div>
 
         {/* Info */}
         <div className="flex-1 min-w-0">
-          <Link href={`/leader/${leader.slug}`}>
-            <h3 className="text-sm font-bold text-slate-100 hover:text-white truncate">{leader.name}</h3>
-          </Link>
+          <h3 className="text-sm font-bold text-slate-100 group-hover:text-white truncate underline-offset-2 group-hover:underline"
+            style={{ textDecorationColor: accentColor }}>
+            {leader.name}
+          </h3>
           <p className="text-xs text-slate-400 truncate">{leader.role}</p>
         </div>
 
@@ -95,91 +98,120 @@ export default function LeaderCard({ leader, viewMode }: LeaderCardProps) {
         <div className="flex-shrink-0 text-right">
           <div className="text-lg font-black" style={{ color: accentColor }}>{leader.totalScore}</div>
         </div>
-      </div>
+
+        {/* View profile affordance */}
+        <div className="flex-shrink-0 hidden sm:flex items-center gap-1 text-xs font-bold group-hover:translate-x-0.5 transition"
+          style={{ color: accentColor }}>
+          View
+          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+          </svg>
+        </div>
+      </Link>
     );
   }
 
   // Grid Mode — Webflow-style dark card
-  return (
-    <div className="group flex flex-col rounded-[10px] overflow-hidden transition-transform duration-300 hover:-translate-y-1"
-      style={{ backgroundColor: '#1A2335' }}
-    >
-      {/* Image Container */}
-      <div className="relative w-full overflow-hidden aspect-[4/5] sm:aspect-auto sm:h-[280px]">
-        <LazyImage
-          src={leader.image}
-          alt={leader.name}
-          className="w-full h-full object-cover object-[center_20%] group-hover:scale-105 transition duration-500"
-        />
-        {/* Subtle bottom gradient */}
-        <div className="absolute inset-0" style={{
-          background: 'linear-gradient(180deg, transparent 80%, rgba(26,35,53,0.4) 100%)'
-        }} />
-        {/* Rank badge */}
-        <div className="absolute top-3 left-3 w-9 h-9 flex items-center justify-center rounded-full font-black text-sm"
-          style={{ backgroundColor: accentColor, color: '#0A0E1A' }}>
-          {leader.rank}
-        </div>
-      </div>
+  const handleBioToggle = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setBioExpanded(!bioExpanded);
+  };
 
-      {/* Content */}
-      <div className="flex flex-col flex-1 px-5 pb-5 pt-3">
-        {/* Name and Role */}
-        <Link href={`/leader/${leader.slug}`}>
-          <h3 className="text-base font-black text-slate-100 hover:text-white transition line-clamp-1">
+  return (
+    <Link
+      href={`/leader/${leader.slug}`}
+      className="group block rounded-[10px] overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:ring-2 hover:ring-offset-2 hover:ring-offset-dark cursor-pointer"
+      style={{ backgroundColor: '#1A2335', boxShadow: '0 1px 0 rgba(255,255,255,0.04) inset' }}
+    >
+      <div className="flex flex-col h-full">
+        {/* Image Container */}
+        <div className="relative w-full overflow-hidden aspect-[4/5] sm:aspect-auto sm:h-[280px]">
+          <LazyImage
+            src={leader.image}
+            alt={leader.name}
+            className="w-full h-full object-cover object-[center_20%] group-hover:scale-105 transition duration-500"
+          />
+          {/* Subtle bottom gradient */}
+          <div className="absolute inset-0" style={{
+            background: 'linear-gradient(180deg, transparent 80%, rgba(26,35,53,0.4) 100%)'
+          }} />
+          {/* Rank badge */}
+          <div className="absolute top-3 left-3 w-9 h-9 flex items-center justify-center rounded-full font-black text-sm"
+            style={{ backgroundColor: accentColor, color: '#0A0E1A' }}>
+            {leader.rank}
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="flex flex-col flex-1 px-5 pb-5 pt-3">
+          {/* Name and Role */}
+          <h3 className="text-base font-black text-slate-100 group-hover:text-white transition line-clamp-1 underline-offset-2 group-hover:underline"
+            style={{ textDecorationColor: accentColor }}>
             {leader.name}
           </h3>
-        </Link>
-        <p className="text-xs text-slate-400 mt-1 line-clamp-2 leading-relaxed">{leader.role}</p>
+          <p className="text-xs text-slate-400 mt-1 line-clamp-2 leading-relaxed">{leader.role}</p>
 
-        {/* Sector Badge */}
-        <div className="mt-2.5">
-          <span className="inline-block px-2.5 py-1 rounded-full text-[11px] font-medium"
-            style={{ backgroundColor: sectorStyle.bg, color: sectorStyle.color }}>
-            {leader.sector}
-          </span>
-        </div>
-
-        {/* OTA Power Score */}
-        <div className="mt-3">
-          <div className="flex justify-between items-center mb-1.5">
-            <span className="text-[11px] font-semibold text-slate-400">OTA Power Score</span>
-            <span className="text-base font-black" style={{ color: accentColor }}>{leader.totalScore}</span>
+          {/* Sector Badge */}
+          <div className="mt-2.5">
+            <span className="inline-block px-2.5 py-1 rounded-full text-[11px] font-medium"
+              style={{ backgroundColor: sectorStyle.bg, color: sectorStyle.color }}>
+              {leader.sector}
+            </span>
           </div>
-          <div className="w-full rounded-sm h-1 overflow-hidden" style={{ backgroundColor: 'rgba(255,255,255,0.06)' }}>
-            <div className="h-full rounded-sm transition-all duration-500"
-              style={{ width: `${leader.totalScore}%`, backgroundColor: accentColor }} />
-          </div>
-        </div>
 
-        {/* Score Breakdown */}
-        <div className="grid grid-cols-5 gap-1.5 mt-3">
-          {Object.entries(leader.scores).map(([key, value]) => (
-            <div key={key} className="text-center">
-              <div className="text-xs font-bold text-slate-200">{value}</div>
-              <div className="text-[10px] text-slate-500">{SCORE_LABELS[key] || key}</div>
+          {/* OTA Power Score */}
+          <div className="mt-3">
+            <div className="flex justify-between items-center mb-1.5">
+              <span className="text-[11px] font-semibold text-slate-400">OTA Power Score</span>
+              <span className="text-base font-black" style={{ color: accentColor }}>{leader.totalScore}</span>
             </div>
-          ))}
-        </div>
+            <div className="w-full rounded-sm h-1 overflow-hidden" style={{ backgroundColor: 'rgba(255,255,255,0.06)' }}>
+              <div className="h-full rounded-sm transition-all duration-500"
+                style={{ width: `${leader.totalScore}%`, backgroundColor: accentColor }} />
+            </div>
+          </div>
 
-        {/* Bio Toggle */}
-        <div className="mt-3 pt-3" style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
-          <button
-            onClick={() => setBioExpanded(!bioExpanded)}
-            className="text-xs font-semibold transition flex items-center gap-1"
-            style={{ color: accentColor }}
-          >
-            {bioExpanded ? 'Hide bio' : 'Bio'}
-            <svg className={`w-3 h-3 transition ${bioExpanded ? 'rotate-180' : ''}`}
-              fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
+          {/* Score Breakdown */}
+          <div className="grid grid-cols-5 gap-1.5 mt-3">
+            {Object.entries(leader.scores).map(([key, value]) => (
+              <div key={key} className="text-center">
+                <div className="text-xs font-bold text-slate-200">{value}</div>
+                <div className="text-[10px] text-slate-500">{SCORE_LABELS[key] || key}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* Footer: Bio toggle + View profile CTA */}
+          <div className="mt-3 pt-3 flex items-center justify-between gap-2"
+            style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+            <button
+              onClick={handleBioToggle}
+              className="text-xs font-semibold transition flex items-center gap-1 hover:opacity-80"
+              style={{ color: '#94a3b8' }}
+              aria-label={bioExpanded ? 'Hide short bio' : 'Show short bio'}
+            >
+              {bioExpanded ? 'Hide bio' : 'Quick bio'}
+              <svg className={`w-3 h-3 transition ${bioExpanded ? 'rotate-180' : ''}`}
+                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <span
+              className="text-xs font-bold flex items-center gap-1 group-hover:translate-x-0.5 transition"
+              style={{ color: accentColor }}
+            >
+              View profile
+              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+              </svg>
+            </span>
+          </div>
           {bioExpanded && (
             <p className="mt-2 text-xs text-slate-400 leading-relaxed">{leader.bio}</p>
           )}
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
