@@ -613,13 +613,13 @@ export const leaders: Leader[] = [
   {
     rank: 48,
     tier: "rising",
-    name: "Anne Glover CBE",
-    slug: generateSlug("Anne Glover CBE"),
+    name: "Dame Anne Glover DBE",
+    slug: generateSlug("Dame Anne Glover DBE"),
     role: "CEO & Co-Founder, Amadeus Capital Partners",
     sector: "Capital Markets",
     totalScore: 51,
     scores: { market: 14, reach: 12, policy: 9, innovation: 8, culture: 8 },
-    bio: "CEO and Co-Founder of Amadeus Capital Partners. CBE for services to business; leading European technology venture capital investor.",
+    bio: "CEO and Co-Founder of Amadeus Capital Partners. DBE for services to business; leading European technology venture capital investor.",
     image: "https://cdn.prod.website-files.com/69889742baae82d9f9911b3b/69c6a194c9e641afe77c1089_Anne%20Glover%20B01.jpg",
   },
   {
