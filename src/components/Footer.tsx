@@ -64,7 +64,10 @@ export default function Footer() {
           <div>
             <h4 className="text-sm font-semibold text-gold mb-4">Privacy</h4>
             <p className="text-gray-400 text-xs leading-relaxed">
-              We process your personal data to deliver The Fifty rankings and improve our services. Your data is processed in accordance with GDPR and our Privacy Policy.
+              We process your personal data to deliver The Fifty rankings and improve our services. Your data is processed in accordance with GDPR and our{' '}
+              <Link href="/privacy" className="text-gold hover:underline">
+                Privacy Policy
+              </Link>.
             </p>
           </div>
         </div>
