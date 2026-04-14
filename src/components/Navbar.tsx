@@ -30,6 +30,12 @@ export default function Navbar() {
             >
               Rankings
             </a>
+            <a
+              href="https://global-100.otamediagroup.com"
+              className="text-xs font-medium uppercase tracking-widest text-white hover:text-gold transition-colors"
+            >
+              Global 100
+            </a>
             <Link
               href="/methodology"
               className="text-xs font-medium uppercase tracking-widest text-white hover:text-gold transition-colors"
@@ -88,6 +94,13 @@ export default function Navbar() {
               className="text-sm font-medium uppercase tracking-widest text-white hover:text-gold transition-colors"
             >
               Rankings
+            </a>
+            <a
+              href="https://global-100.otamediagroup.com"
+              onClick={() => setIsOpen(false)}
+              className="text-sm font-medium uppercase tracking-widest text-white hover:text-gold transition-colors"
+            >
+              Global 100
             </a>
             <Link
               href="/methodology"
