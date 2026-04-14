@@ -31,7 +31,7 @@ export default function Navbar() {
               Rankings
             </a>
             <a
-              href="https://global-100.otamediagroup.com"
+              href="https://global100.otamediagroup.com"
               className="text-xs font-medium uppercase tracking-widest text-white hover:text-gold transition-colors"
             >
               Global 100
@@ -96,7 +96,7 @@ export default function Navbar() {
               Rankings
             </a>
             <a
-              href="https://global-100.otamediagroup.com"
+              href="https://global100.otamediagroup.com"
               onClick={() => setIsOpen(false)}
               className="text-sm font-medium uppercase tracking-widest text-white hover:text-gold transition-colors"
             >
